@@ -48,7 +48,7 @@ public class Main {
 
 		else {
 			int last = v.size() - k;
-			NumtoAdd = (1 << v.get(last));
+			int NumtoAdd = (1 << v.get(last));
 
 			for (int j = 0; j < last; j++) {
 				NumtoAdd = NumtoAdd -(1 << (v.get(j)));
