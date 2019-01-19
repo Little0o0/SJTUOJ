@@ -14,8 +14,6 @@ Sample Input
 Sample Output
 0
 
-
-这种算法下，依然还有一个数据没有通过，没有debug完
 */
 
 import java.util.Scanner;
@@ -24,37 +22,44 @@ import java.util.Vector;
 public class Main {
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {
-		Vector<Integer> v = new Vector<>(); //v用于储存水量对2的对数 , n与k与题目相对应
 		Scanner sc = new Scanner(System.in);
-		long n = sc.nextLong(); 	
+
+		int n = sc.nextInt();  //n , k 与题中所给含义相同
 		int k = sc.nextInt();
+		
+		int n_copy = n, sim = 0, ans = 0; //n_copy是用来恢复后面的n sim是不加瓶子能最简化个数 , ans是输出
 
-		//此处统计倘若不添加瓶子，能够最少合并为几个瓶子，并记录瓶子水量对2的对数
-		int i = -1;
-		do {
-			i++;
-			if (n % 2 == 1)
-				v.add(i);
-		} while ((n = (n >> 1)) != 0);
+		if (n <= k)
+			System.out.println(k - n);//注意这种情况下, 在瓶子不够要求的时候需要补瓶子
+		else {
 
-		//若最简化的瓶子数小于等于要求瓶子数，则不需要加瓶子
-		if (v.size() <= k)
-			System.out.println(0);
 
-		/*否则，选出还需要合并多少个瓶子，计算简化水量，
-		比如：倘若还需要合并两个瓶子，则用倒数第三多的瓶子
-		中的水减去比它少的瓶子中的水即为还需要的瓶子数 
+			do {
+				if ((n & 1) == 1)
+					sim++;
+			} while ((n >>= 1) != 0);    
+			if (sim <= k)
+				System.out.println(0);	//在最简化瓶子数小于要求时, 不需要加瓶子
+
+
+			/*否则，选出还需要合并多少个瓶子，计算简化水量，
+			比如：倘若还需要合并两个瓶子，则用倒数第三多的瓶子
+			中的水减去比它少的瓶子即为还需要的瓶子数 
 		*/
 
-		else {
-			int last = v.size() - k;
-			int NumtoAdd = (1 << v.get(last));
+			else {
+				n = n_copy;
+				for (int i = 1, j = 0; j <= sim - k; i <<= 1) {  
 
-			for (int j = 0; j < last; j++) {
-				NumtoAdd = NumtoAdd -(1 << (v.get(j)));
+					if ((n & 1) == 1)					
+						j += 1;
+					else
+						ans += i;
+
+					n >>= 1;
+				}
+				System.out.println(ans+1); 
 			}
-
-			System.out.println(NumtoAdd);
 		}
 	}
 }
