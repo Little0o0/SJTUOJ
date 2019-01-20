@@ -5,20 +5,21 @@ Because I am lazy~_(:з」∠) , So update is unscheduled ~<br>
 
 About Update
 -----
-Update 10 problem each time (Accepted or unsolved).<br>
-In this .md, I will show the number of these ten questions and unsolved problems' link.<br>
+Update __10__ problems each time (Accepted or unsolved).<br>
+Only when all these problems are AC , the new problems will be updated<br>
+In this file, I will show the number of these ten problems and unsolved problems' link.<br>
 
 About Support 
 ---
-Please solve the problems which is unsolved in these __10__ problems.<br>
+Please solve the problems which is __unsolved in these 10 problems__.<br>
 __Please do not advance.___(:з」∠) <br>
-You can also update your better algorithm in all accepted problems.<br>
+You can also update your better algorithm in all solved problems.<br>
 
 About Code
 ------
 __Java__ is preferable, and __C,C++,Python__ are also OK<br>
-(I will change them to Java in the end, __because Java is the best languageథ౪థ__)<br>
-beg for __note__ in your code.╥﹏╥
+However, I will change them to Java finally, __because Java is the best languageథ౪థ__<br>
+Beg for __note__ in your code.╥﹏╥
 
 
 Recent
