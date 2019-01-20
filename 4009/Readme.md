@@ -47,3 +47,7 @@ Sample Output
 Link
 -----
 <https://acm.sjtu.edu.cn/OnlineJudge/problem/4009>
+
+Solution
+----
+就是先从小到大寻找可能的约数a,然后按照约数a把明文加密再和密文相比较.
