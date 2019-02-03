@@ -27,7 +27,6 @@ Recent
 Focus on __4011 - 4020__ recently.<br>
 And
  __[4007](https://acm.sjtu.edu.cn/OnlineJudge/problem/4007),
-[4014](https://acm.sjtu.edu.cn/OnlineJudge/problem/4014),
 [4015](https://acm.sjtu.edu.cn/OnlineJudge/problem/4015),
 [4016](https://acm.sjtu.edu.cn/OnlineJudge/problem/4016),
 [4017](https://acm.sjtu.edu.cn/OnlineJudge/problem/4017),
